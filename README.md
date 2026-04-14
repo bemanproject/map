@@ -21,7 +21,7 @@ of throwing (`.at()`) or silently inserting (`operator[]`).
 ## Usage
 
 P3091 adds a `.get(key)` member function to `map`, `unordered_map`, and `flat_map`.
-It returns `optional<mapped_type&>` — non-throwing, never inserting, and composable
+It returns `optional<mapped_type&>` a non-throwing, never inserting, and composable
 with all `optional` monadic operations.
 
 ```cpp
@@ -34,7 +34,7 @@ if (auto v = scores.get("alice")) {
     std::cout << *v << "\n";  // 42
 }
 
-// Missing key: returns nullopt — no exception, no insertion
+// Missing key: returns nullopt, no exception, no insertion
 auto v = scores.get("carol");
 assert(!v.has_value());
 
