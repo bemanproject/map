@@ -1,0 +1,16 @@
+{
+  "dependencies": [
+    {
+      "name": "googletest",
+      "package_name": "GTest",
+      "git_repository": "https://github.com/google/googletest.git",
+      "git_tag": "6910c9d9165801d8827d628cb72eb7ea9dd538c5"
+    },
+    {
+      "name": "beman_optional",
+      "package_name": "beman.optional",
+      "git_repository": "https://github.com/bemanproject/optional.git",
+      "git_tag": "c0dc8679103e3ddf012560e04610e9767c68cd51"
+    }
+  ]
+}
