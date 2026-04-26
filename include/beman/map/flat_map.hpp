@@ -30,8 +30,8 @@ namespace beman::map {
 
 template <class Key,
           class T,
-          class Compare      = std::less<Key>,
-          class KeyContainer = std::vector<Key>,
+          class Compare         = std::less<Key>,
+          class KeyContainer    = std::vector<Key>,
           class MappedContainer = std::vector<T>>
 class flat_map : public std::flat_map<Key, T, Compare, KeyContainer, MappedContainer> {
     using base_type = std::flat_map<Key, T, Compare, KeyContainer, MappedContainer>;

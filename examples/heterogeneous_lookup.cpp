@@ -26,7 +26,7 @@ int main() {
     beman::map::map<std::string, int, std::less<>> m{{"hello", 1}, {"world", 2}};
 
     std::string_view key = "hello";
-    if (auto v = m.get(key)) { // no std::string construction
+    if (auto v = m.get(key)) {                          // no std::string construction
         std::cout << "map[\"hello\"] = " << *v << "\n"; // 1
     }
 
@@ -39,7 +39,7 @@ int main() {
     beman::map::unordered_map<std::string, int, string_hash, std::equal_to<>> um;
     um.emplace("foo", 42);
 
-    if (auto v = um.get(std::string_view{"foo"})) { // no std::string construction
+    if (auto v = um.get(std::string_view{"foo"})) {             // no std::string construction
         std::cout << "unordered_map[\"foo\"] = " << *v << "\n"; // 42
     }
 

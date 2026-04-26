@@ -14,10 +14,7 @@ check_cxx_source_compiles(
 # map tests
 add_executable(beman.map.tests.map)
 target_sources(beman.map.tests.map PRIVATE map.test.cpp)
-target_link_libraries(
-    beman.map.tests.map
-    PRIVATE beman::map GTest::gtest_main
-)
+target_link_libraries(beman.map.tests.map PRIVATE beman::map GTest::gtest_main)
 
 # unordered_map tests
 add_executable(beman.map.tests.unordered_map)
@@ -41,5 +38,8 @@ if(BEMAN_MAP_HAS_FLAT_MAP)
     )
     gtest_discover_tests(beman.map.tests.flat_map)
 else()
-    message(WARNING "beman.map: <flat_map> not available — skipping flat_map tests")
+    message(
+        WARNING
+        "beman.map: <flat_map> not available — skipping flat_map tests"
+    )
 endif()

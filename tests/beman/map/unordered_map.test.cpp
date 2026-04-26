@@ -90,12 +90,8 @@ TEST(UnorderedMapGetTest, value_or_on_miss) {
 
 struct transparent_string_hash {
     using is_transparent = void;
-    std::size_t operator()(std::string_view sv) const noexcept {
-        return std::hash<std::string_view>{}(sv);
-    }
-    std::size_t operator()(const std::string& s) const noexcept {
-        return std::hash<std::string_view>{}(s);
-    }
+    std::size_t operator()(std::string_view sv) const noexcept { return std::hash<std::string_view>{}(sv); }
+    std::size_t operator()(const std::string& s) const noexcept { return std::hash<std::string_view>{}(s); }
 };
 
 TEST(UnorderedMapGetTest, heterogeneous_get_hit) {

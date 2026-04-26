@@ -12,11 +12,10 @@ set(_beman_map_headers map.hpp unordered_map.hpp)
 if(BEMAN_MAP_HAS_FLAT_MAP)
     list(APPEND _beman_map_headers flat_map.hpp)
 else()
-    message(WARNING "beman.map: <flat_map> not available — flat_map.hpp not installed")
+    message(
+        WARNING
+        "beman.map: <flat_map> not available — flat_map.hpp not installed"
+    )
 endif()
 
-target_sources(
-    beman.map
-    PUBLIC FILE_SET HEADERS
-    FILES ${_beman_map_headers}
-)
+target_sources(beman.map PUBLIC FILE_SET HEADERS FILES ${_beman_map_headers})
