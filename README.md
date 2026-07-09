@@ -4,8 +4,12 @@
 SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 -->
 
-<!-- markdownlint-disable-next-line line-length -->
-![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_under_development.svg) ![Continuous Integration Tests](https://github.com/bemanproject/map/actions/workflows/ci_tests.yml/badge.svg) ![Lint Check (pre-commit)](https://github.com/bemanproject/map/actions/workflows/pre-commit-check.yml/badge.svg) ![Standard Target](https://github.com/bemanproject/beman/blob/main/images/badges/cpp29.svg)
+<!-- markdownlint-disable line-length -->
+[![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_under_development.svg)](https://github.com/bemanproject/beman/blob/main/docs/beman_library_maturity_model.md#the-beman-library-maturity-model)
+![Continuous Integration Tests](https://github.com/bemanproject/map/actions/workflows/ci_tests.yml/badge.svg)
+![Lint Check (pre-commit)](https://github.com/bemanproject/map/actions/workflows/pre-commit-check.yml/badge.svg)
+![Standard Target](https://github.com/bemanproject/beman/blob/main/images/badges/cpp29.svg)
+<!-- markdownlint-restore -->
 
 `beman.map` implements safer, non-throwing map lookups returning `optional<T&>` instead
 of throwing (`.at()`) or silently inserting (`operator[]`).
