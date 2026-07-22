@@ -28,15 +28,15 @@ include(infra/cmake/beman-install-library.cmake)
 
 find_package(beman.optional REQUIRED)
 
+add_library(beman.map INTERFACE)
+add_library(beman::map ALIAS beman.map)
+
 # When beman.optional is brought in via FetchContent it provides the
 # beman.optional target. When installed and found via find_package it also
 # exports beman::optional. Ensure the alias always exists.
 if(TARGET beman.optional AND NOT TARGET beman::optional)
     add_library(beman::optional ALIAS beman.optional)
 endif()
-
-add_library(beman.map INTERFACE)
-add_library(beman::map ALIAS beman.map)
 
 target_sources(
     beman.map

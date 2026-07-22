@@ -9,6 +9,7 @@ SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 ![Continuous Integration Tests](https://github.com/bemanproject/map/actions/workflows/ci_tests.yml/badge.svg)
 ![Lint Check (pre-commit)](https://github.com/bemanproject/map/actions/workflows/pre-commit-check.yml/badge.svg)
 ![Standard Target](https://github.com/bemanproject/beman/blob/main/images/badges/cpp29.svg)
+[![Compiler Explorer Example](https://img.shields.io/badge/Try%20it%20on%20Compiler%20Explorer-grey?logo=compilerexplorer&logoColor=67c52a)](https://godbolt.org/z/7MWhaP6a3)
 <!-- markdownlint-restore -->
 
 `beman.map` implements safer, non-throwing map lookups returning `optional<T&>` instead
