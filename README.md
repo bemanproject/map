@@ -62,12 +62,19 @@ Full runnable examples can be found in [`examples/`](examples/).
 
 ### Build Environment
 
-* A C++ compiler supporting C++23 or later
+This project requires at least the following to build:
+
+* A C++ compiler that conforms to the C++23 standard or greater
 * CMake 3.30 or later
+* (Test Only) GoogleTest
 * [beman.optional](https://github.com/bemanproject/optional) (auto-fetched via lockfile)
 * (Test only) GoogleTest (auto-fetched via lockfile)
 
-You can disable building tests by setting `BEMAN_MAP_BUILD_TESTS=OFF`.
+You can disable building tests by setting CMake option `BEMAN_MAP_BUILD_TESTS` to
+`OFF` when configuring the project.
+
+You can disable building examples by setting CMake option `BEMAN_MAP_BUILD_EXAMPLES` to
+`OFF` when configuring the project.
 
 ### Supported Platforms
 
